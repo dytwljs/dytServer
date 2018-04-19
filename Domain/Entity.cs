@@ -14,7 +14,7 @@ namespace dytServer.Domain
     }
 
     /// <summary>
-    /// 定义默认主键类型为Guid的实体基类
+    /// 定义默认主键类型为int的实体基类
     /// </summary>
     public abstract class Entity : Entity<int>
     {

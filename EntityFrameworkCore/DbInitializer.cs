@@ -14,7 +14,7 @@ namespace dytServer.EntityFrameworkCore
             //{
             //    return;
             //}
-            var dept = new Department { Id = 1, Code = "1", DepartmentGUID = System.Guid.NewGuid().ToString(),ParentId=1,Name="aa" };
+            var dept = new Department {DepartmentId=2, Code = "1", DepartmentGUID = System.Guid.NewGuid().ToString(),ParentId=1,Name="aa" };
             context.Departments.Add(dept);
             //// Look for any students.
             //var roles = new Role[]{

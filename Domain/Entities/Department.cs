@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace dytServer.Domain.Entities
 {
     /// <summary>
     /// 部门实体
     /// </summary>
-    public class Department : Entity
+    [Table("Department")]
+    public class Department
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int DepartmentId { get; set; }
         public string DepartmentGUID { get; set; }
         /// <summary>
