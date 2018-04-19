@@ -10,10 +10,10 @@ namespace dytServer.EntityFrameworkCore
         public static void Initialize(dytServerDbContext context)
         {
             context.Database.EnsureCreated();
-            //if (context.Departments.Any())
-            //{
-            //    return;
-            //}
+            if (context.Departments.Any())
+            {
+                return;
+            }
             var dept = new Department {DepartmentId=2, Code = "1", DepartmentGUID = System.Guid.NewGuid().ToString(),ParentId=1,Name="aa" };
             context.Departments.Add(dept);
             //// Look for any students.
