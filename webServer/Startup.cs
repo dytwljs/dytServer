@@ -18,7 +18,7 @@ namespace webServer
             Configuration = configuration;
 
             try {
-           //    testDA();
+               testDA();
             }
             catch (Exception e)
             {
