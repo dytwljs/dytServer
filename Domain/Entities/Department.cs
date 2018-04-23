@@ -9,10 +9,10 @@ namespace dytServer.Domain.Entities
     /// 部门实体
     /// </summary>
     [Table("Department")]
-    public class Department
+    public class Department:Entity
     {
-        [Key]
-        public int DepartmentId { get; set; }
+   //     [Key]
+   //     public int DepartmentId { get; set; }
         public string DepartmentGUID { get; set; }
         /// <summary>
         /// 部门名称
@@ -61,10 +61,10 @@ namespace dytServer.Domain.Entities
         /// </summary>
         public int IsDeleted { get; set; }
 
-        ///// <summary>
-        ///// 包含用户
-        ///// </summary>
-        //public virtual ICollection<User> Users { get; set; }
+        /// <summary>
+        /// 包含用户
+        /// </summary>
+        public virtual ICollection<User> Users { get; set; }
     }
 
 }
