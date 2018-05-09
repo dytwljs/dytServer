@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace dytServer.Domain
 {
     /// <summary>
@@ -7,9 +9,11 @@ namespace dytServer.Domain
     /// <typeparam name="TPrimaryKey">主键类型</typeparam>
     public abstract class Entity<TPrimaryKey>
     {
+        
         /// <summary>
         /// 主键
-        /// </summary>
+        /// </summary> 
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.None)]
         public virtual TPrimaryKey Id { get; set; }
     }
 
@@ -19,6 +23,16 @@ namespace dytServer.Domain
     public abstract class Entity : Entity<int>
     {
 
+    }
+    //TIdentity
+    public abstract class EntityIdentity<TIdentity>{
+        
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public virtual TIdentity Id { get; set; }
+    }
+
+    public abstract class EntityIdentity:EntityIdentity<int>
+    {
     }
     ///// <summary>
     ///// 定义默认主键类型为Guid的实体基类

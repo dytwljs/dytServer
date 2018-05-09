@@ -37,7 +37,7 @@ namespace dytServer.EntityFrameworkCore
 
             //启用Guid主键类型扩展
             ////   modelBuilder.HasPostgresExtension("uuid-ossp");
-            modelBuilder.Entity<Department>().ToTable("Department");
+         //   modelBuilder.Entity<Department>().ToTable("Department");
             base.OnModelCreating(modelBuilder);
         }
 	}
